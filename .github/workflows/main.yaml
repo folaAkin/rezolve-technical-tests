@@ -5,7 +5,6 @@ on:
       - 'rezolve-technical-tests'
 jobs:
   cypress-run:
-  name: E2E on Chrome
   runs-on: ubuntu-18.04
   container: cypress/browsers:node12.16.2-chrome81-ff75
   steps:
