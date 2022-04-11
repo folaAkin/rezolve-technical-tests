@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://create.rezolve.com/engagement-creation",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "charts": true,
+    "reportPageTitle": "My Test Suite",
+    "embeddedScreenshots": true,
+    "inlineAssets": true
+  },
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 5000,
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "TestReport/assets",
+  "video": true
+}
