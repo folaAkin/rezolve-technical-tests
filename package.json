@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "cypress run --browser chrome",
-    "report:merge": "mochawesome-merge cypress/results/*.json > cypress/results/index.json",
-    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "clean:reports": "rm -R -f cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochareports",
+    "pretest": "npm run clean:reports",
+    "test:chrome": "npm run pretest && cypress run --browser chrome",
+    "report:merge": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "report:generate": "marge cypress/reports/mochareports/report.json --reportDir public --assetsDir public/assets --reportPageTitle report.html"
 
   },
   "keywords": [],

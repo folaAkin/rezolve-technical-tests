@@ -1,16 +1,21 @@
 {
   "baseUrl": "https://create.rezolve.com/engagement-creation",
-  "reporter": "mochawesome",
-  "reporterOptions": {
-    "reportDir": "cypress/results",
-    "charts": true,
-    "reportPageTitle": "My Test Suite",
-    "embeddedScreenshots": true,
-    "inlineAssets": true
-  },
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 5000,
   "screenshotOnRunFailure": true,
   "screenshotsFolder": "TestReport/assets",
-  "video": true
+  "video": true,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "embeddedScreenshots": true,
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "charts": true,
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  }
 }
