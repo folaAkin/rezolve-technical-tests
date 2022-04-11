@@ -10,4 +10,5 @@ npm-debug.log
 cypress/cucumber-json
 reports/
 xunit.xml
- mochawesome-report/
+mochawesome-report/
+public/
