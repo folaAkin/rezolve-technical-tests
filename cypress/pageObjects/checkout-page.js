@@ -10,6 +10,7 @@ class CheckoutPage {
   }
 
   clickOnCreateEngagementButton() {
+    //create engagement
     cy.get(this.createEngagementButton).should("be.visible").click();
   }
 }
