@@ -2,9 +2,10 @@ name: Create Cypress report
 on:
   push:
     branches:
-      - 'rezolve-technical-tests'
+      - "rezolve-technical-tests"
 jobs:
-  cypress-run:
+  cypress-e2e-chrome81:
+  name: Run on Chrome 81
   runs-on: ubuntu-18.04
   container: cypress/browsers:node12.16.2-chrome81-ff75
   steps:
@@ -31,5 +32,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+        user_name: "github-actions[bot]"
+        user_email: "github-actions[bot]@users.noreply.github.com"
